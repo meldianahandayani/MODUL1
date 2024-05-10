@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:title="Dice Roll App"
+        app:titleTextColor="@android:color/white"/>
+
+    <ImageView
+        android:id="@+id/dice1"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:src="@drawable/empty_dice"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="90dp"
+        android:contentDescription="@string/dice_image_description"/>
+
+    <ImageView
+        android:id="@+id/dice2"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:src="@drawable/empty_dice"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/dice1"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/dice_image_description"/>
+
+    <Button
+        android:id="@+id/rollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll Dice"
+        android:layout_below="@id/dice1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rollButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="18sp"/>
+</RelativeLayout>
